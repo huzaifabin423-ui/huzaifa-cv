@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Huzaifa Bin Mudassar — Full-Stack Developer</title>
+<meta name="description" content="Self-taught full-stack developer building production web applications with Python, Flask, and JavaScript. Based in Pakistan.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<!-- SCROLL PROGRESS -->
+<div id="progress-bar"></div>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="#hero">hbm<em>.</em>dev</a>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#education">Education</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+<!-- ════════════ HERO ════════════ -->
+<section id="hero">
+
+  <!-- Animated background blobs -->
+  <div class="hero-bg" aria-hidden="true">
+    <div class="hero-blob hero-blob-1"></div>
+    <div class="hero-blob hero-blob-2"></div>
+    <div class="hero-blob hero-blob-3"></div>
+  </div>
+
+  <div class="container hero-container">
+    <div class="hero-inner">
+
+      <!-- LEFT: text -->
+      <div class="hero-left">
+        <div class="hero-status">
+          <span>Available for opportunities</span>
+        </div>
+        <p class="hero-eyebrow">Full-Stack Developer</p>
+        <h1>
+          <span class="name-first">Huzaifa</span><br>
+          <span class="name-accent">Bin Mudassar</span>
+        </h1>
+        <p class="hero-tagline">
+          Self-taught full-stack developer building end-to-end web applications —
+          from server-side logic to polished interfaces. Python, Flask, JavaScript,
+          and modern web.
+        </p>
+
+        <!-- Animated hero stats -->
+        <div class="hero-mini-stats">
+          <div class="hero-stat-item">
+            <span class="hero-stat-num" data-target="10">0</span><span class="hero-stat-plus">+</span>
+            <span class="hero-stat-label">Projects</span>
+          </div>
+          <span class="hero-stat-sep">·</span>
+          <div class="hero-stat-item">
+            <span class="hero-stat-num" data-target="4">0</span>
+            <span class="hero-stat-label">Live in Production</span>
+          </div>
+          <span class="hero-stat-sep">·</span>
+          <div class="hero-stat-item">
+            <span class="hero-stat-self">Self-Taught</span>
+          </div>
+        </div>
+
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">View My Work →</a>
+          <a href="#contact"  class="btn btn-ghost">Get In Touch</a>
+        </div>
+      </div>
+
+      <!-- RIGHT: avatar + floating badges -->
+      <div class="hero-visual" aria-hidden="false">
+        <div class="hero-avatar">
+          <div class="avatar-ring"></div>
+          <div class="avatar-img-wrap">
+            <img src="{{ url_for('static', filename='photo.jpg') }}"
+                 alt="Huzaifa Bin Mudassar — Full-Stack Developer">
+          </div>
+        </div>
+        <!-- Floating tech badges -->
+        <span class="tech-float tf-1">Python</span>
+        <span class="tech-float tf-2">Flask</span>
+        <span class="tech-float tf-3">JavaScript</span>
+        <span class="tech-float tf-4">React</span>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Scroll indicator -->
+  <div class="scroll-indicator" aria-hidden="true">
+    <div class="scroll-mouse">
+      <div class="scroll-wheel"></div>
+    </div>
+  </div>
+
+</section>
+
+<div class="divider"></div>
+
+<!-- ════════════ ABOUT ════════════ -->
+<section id="about" class="section">
+  <div class="container">
+
+    <div class="section-header fade-in">
+      <p class="section-eyebrow">About Me</p>
+      <h2 class="section-title">Full-stack. Self-built.<br>Production-ready.</h2>
+    </div>
+
+    <div class="about-grid">
+      <div class="about-text fade-in">
+        <p>
+          I'm a <strong>self-taught full-stack developer</strong> currently pursuing a UK Level 3
+          Diploma in IT and Cyber Security at Superior College, Lahore. I build complete web
+          applications — both the server-side logic and the client-side experience — and I've
+          been doing it without waiting for a classroom to catch up.
+        </p>
+        <p>
+          From factory management systems and ISP platforms to e-commerce storefronts and food
+          ordering apps, every project I've shipped was built independently using Python, Flask,
+          JavaScript, and modern web technologies. Four of those are live in production, being
+          used by real clients today.
+        </p>
+        <p>
+          I'm actively looking for a <strong>full-stack developer role or internship</strong>
+          where I can contribute immediately, grow alongside a team, and keep shipping.
+        </p>
+      </div>
+
+      <div class="stats-grid fade-in">
+        <div class="stat-card">
+          <div class="stat-number">10+</div>
+          <div class="stat-label">Projects Built</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">4</div>
+          <div class="stat-label">Live in Production</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">12+</div>
+          <div class="stat-label">Technologies</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-number">3</div>
+          <div class="stat-label">Languages</div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════════════ SKILLS ════════════ -->
+<section id="skills" class="section">
+  <div class="container">
+
+    <div class="section-header fade-in">
+      <p class="section-eyebrow">Technical Skills</p>
+      <h2 class="section-title">What I build with</h2>
+    </div>
+
+    <div class="skills-block fade-in">
+      <div>
+        <p class="skill-group-label">Languages &amp; Frameworks</p>
+        <div class="skills-pills">
+          <span class="skill-pill">Python</span>
+          <span class="skill-pill">Flask</span>
+          <span class="skill-pill">JavaScript</span>
+          <span class="skill-pill">HTML5</span>
+          <span class="skill-pill">CSS3</span>
+          <span class="skill-pill">Node.js</span>
+          <span class="skill-pill">Express</span>
+          <span class="skill-pill">Next.js</span>
+          <span class="skill-pill">React</span>
+        </div>
+      </div>
+      <div>
+        <p class="skill-group-label">Libraries &amp; Tools</p>
+        <div class="skills-pills">
+          <span class="skill-pill">SQLAlchemy</span>
+          <span class="skill-pill">SQLite</span>
+          <span class="skill-pill">Flask-Login</span>
+          <span class="skill-pill">OpenAI API</span>
+          <span class="skill-pill">Matplotlib</span>
+          <span class="skill-pill">CustomTkinter</span>
+          <span class="skill-pill">WebSockets</span>
+          <span class="skill-pill">PyInstaller</span>
+        </div>
+      </div>
+      <div>
+        <p class="skill-group-label">Domain &amp; Soft Skills</p>
+        <div class="skills-pills">
+          <span class="skill-pill">Full-Stack Web Development</span>
+          <span class="skill-pill">REST APIs</span>
+          <span class="skill-pill">Database Design</span>
+          <span class="skill-pill">Desktop App Development</span>
+          <span class="skill-pill">Problem Solving</span>
+          <span class="skill-pill">Urdu (Fluent)</span>
+          <span class="skill-pill">English (Working)</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════════════ PROJECTS ════════════ -->
+<section id="projects" class="section">
+  <div class="container">
+
+    <div class="section-header fade-in">
+      <p class="section-eyebrow">Work</p>
+      <h2 class="section-title">Projects I've shipped</h2>
+    </div>
+
+    <div class="projects-grid">
+
+      <!-- 01 — AutoElite Motors -->
+      <div class="project-card featured fade-in">
+        <div class="project-card-header">
+          <span class="project-num">01</span>
+          <div class="project-badges">
+            <span class="badge badge-featured">Featured</span>
+            <span class="badge badge-live">● Live</span>
+          </div>
+        </div>
+        <h3 class="project-title">AutoElite Motors — Pre-Owned Car Dealership Platform</h3>
+        <p class="project-desc">
+          Full-stack car-dealership site with inventory listings, detailed car pages,
+          admin login and dashboard for managing stock, plus about, location, and contact
+          pages. Built and live in production.
+        </p>
+        <div class="project-footer">
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">HTML/CSS</span>
+          </div>
+          <a href="https://rani7882.pythonanywhere.com/" target="_blank" rel="noopener" class="project-link">
+            Visit Live
+            <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- 02 — AH Homes -->
+      <div class="project-card featured fade-in">
+        <div class="project-card-header">
+          <span class="project-num">02</span>
+          <div class="project-badges">
+            <span class="badge badge-featured">Featured</span>
+            <span class="badge badge-live">● Live</span>
+          </div>
+        </div>
+        <h3 class="project-title">AH Homes — Luxury Home Décor E-Commerce</h3>
+        <p class="project-desc">
+          Complete e-commerce storefront for a home-décor brand: product collections,
+          product detail pages, shopping cart, checkout flow, and order tracking.
+          Modern responsive design, deployed on Vercel.
+        </p>
+        <div class="project-footer">
+          <div class="tech-stack">
+            <span class="tech-tag">Next.js</span>
+            <span class="tech-tag">React</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">CSS</span>
+          </div>
+          <a href="https://ahhomes-q53y.vercel.app/" target="_blank" rel="noopener" class="project-link">
+            Visit Live
+            <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- 03 — Potatopia -->
+      <div class="project-card featured fade-in">
+        <div class="project-card-header">
+          <span class="project-num">03</span>
+          <div class="project-badges">
+            <span class="badge badge-featured">Featured</span>
+            <span class="badge badge-live">● Live</span>
+          </div>
+        </div>
+        <h3 class="project-title">Potatopia — Online Food Ordering Platform</h3>
+        <p class="project-desc">
+          Food-ordering website built for a restaurant client: full menu, cart, and
+          order-management flow. Clean, fast, mobile-first storefront deployed on Vercel.
+        </p>
+        <div class="project-footer">
+          <div class="tech-stack">
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">HTML/CSS</span>
+          </div>
+          <a href="https://potatopia.vercel.app/" target="_blank" rel="noopener" class="project-link">
+            Visit Live
+            <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- 04 — Sindh Ice -->
+      <div class="project-card fade-in">
+        <div class="project-card-header">
+          <span class="project-num">04</span>
+          <div class="project-badges">
+            <span class="badge badge-live">● Live</span>
+          </div>
+        </div>
+        <h3 class="project-title">Sindh Ice — Factory Management &amp; POS System</h3>
+        <p class="project-desc">
+          Flask-based business management and POS system for a real ice factory and
+          distribution operation. Handles sales, inventory, and reporting.
+          In production and used daily.
+        </p>
+        <div class="project-footer">
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">JavaScript</span>
+            <span class="tech-tag">HTML/CSS</span>
+          </div>
+          <a href="https://sindhice.pythonanywhere.com/" target="_blank" rel="noopener" class="project-link">
+            Visit Live
+            <svg viewBox="0 0 24 24"><line x1="7" y1="17" x2="17" y2="7"/><polyline points="7 7 17 7 17 17"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- 05 — AI Chatbot -->
+      <div class="project-card fade-in">
+        <div class="project-card-header">
+          <span class="project-num">05</span>
+          <div class="project-badges"></div>
+        </div>
+        <h3 class="project-title">AI Chatbot</h3>
+        <p class="project-desc">
+          Conversational AI assistant with multi-personality support, persistent
+          conversation history, and adjustable response parameters — powered by the
+          OpenAI API.
+        </p>
+        <div class="project-footer">
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">OpenAI API</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 06 — Productivity Dashboard -->
+      <div class="project-card fade-in">
+        <div class="project-card-header">
+          <span class="project-num">06</span>
+          <div class="project-badges"></div>
+        </div>
+        <h3 class="project-title">Productivity Dashboard</h3>
+        <p class="project-desc">
+          Task and productivity tracking dashboard with notes, Pomodoro timer,
+          habit tracking, and data-visualisation charts.
+        </p>
+        <div class="project-footer">
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 07 — Hostel Finance -->
+      <div class="project-card fade-in">
+        <div class="project-card-header">
+          <span class="project-num">07</span>
+          <div class="project-badges"></div>
+        </div>
+        <h3 class="project-title">Hostel Finance System</h3>
+        <p class="project-desc">
+          Finance and records management for a hostel: expense tracking, multi-user
+          auth, and automated expense splitting between residents.
+        </p>
+        <div class="project-footer">
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">SQLite</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 08 — ISP Management -->
+      <div class="project-card fade-in">
+        <div class="project-card-header">
+          <span class="project-num">08</span>
+          <div class="project-badges"></div>
+        </div>
+        <h3 class="project-title">ISP Management Software</h3>
+        <p class="project-desc">
+          Customer and subscription management for an ISP: billing, packages,
+          complaint tracking, and daily/monthly reporting with CSV export.
+        </p>
+        <div class="project-footer">
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">SQLite</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 09 — Budget Analyzer -->
+      <div class="project-card fade-in">
+        <div class="project-card-header">
+          <span class="project-num">09</span>
+          <div class="project-badges"></div>
+        </div>
+        <h3 class="project-title">Monthly Budget Analyzer</h3>
+        <p class="project-desc">
+          Desktop application to track and visualise monthly budgets: charts, goal
+          setting, and transaction history. Packaged as a standalone .exe.
+        </p>
+        <div class="project-footer">
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">HTML/CSS</span>
+            <span class="tech-tag">PyInstaller</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 10 — Showroom Accounting -->
+      <div class="project-card fade-in">
+        <div class="project-card-header">
+          <span class="project-num">10</span>
+          <div class="project-badges"></div>
+        </div>
+        <h3 class="project-title">Showroom Accounting &amp; Inventory System</h3>
+        <p class="project-desc">
+          Merchandise accounting and inventory management for a retail showroom:
+          stock tracking, sales records, and financial accounting in one platform.
+        </p>
+        <div class="project-footer">
+          <div class="tech-stack">
+            <span class="tech-tag">Python</span>
+            <span class="tech-tag">Flask</span>
+            <span class="tech-tag">JavaScript</span>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /projects-grid -->
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════════════ EDUCATION ════════════ -->
+<section id="education" class="section">
+  <div class="container">
+
+    <div class="section-header fade-in">
+      <p class="section-eyebrow">Education</p>
+      <h2 class="section-title">Academic background</h2>
+    </div>
+
+    <div class="edu-list">
+
+      <div class="edu-card fade-in">
+        <div class="edu-icon">🎓</div>
+        <div class="edu-body">
+          <h3 class="edu-degree">UK Level 3 Diploma — IT &amp; Cyber Security</h3>
+          <p class="edu-school">Superior College, Lahore</p>
+        </div>
+        <span class="edu-badge badge-ongoing">Ongoing</span>
+      </div>
+
+      <div class="edu-card fade-in">
+        <div class="edu-icon">📘</div>
+        <div class="edu-body">
+          <h3 class="edu-degree">Matric — Home Schooling</h3>
+          <p class="edu-school">Independent Study &nbsp;·&nbsp; 2022 – 2024</p>
+        </div>
+        <span class="edu-badge badge-done">Completed</span>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════════════ STRENGTHS ════════════ -->
+<section id="strengths" class="section">
+  <div class="container">
+
+    <div class="section-header fade-in">
+      <p class="section-eyebrow">Key Strengths</p>
+      <h2 class="section-title">What sets me apart</h2>
+    </div>
+
+    <div class="strengths-grid">
+      <div class="strength-card fade-in">
+        <span class="strength-icon">🧠</span>
+        <h3 class="strength-title">Self-Learner</h3>
+        <p class="strength-desc">
+          Taught myself full-stack development entirely through documentation, online
+          resources, and hands-on building — no formal coding course needed.
+        </p>
+      </div>
+      <div class="strength-card fade-in">
+        <span class="strength-icon">🚀</span>
+        <h3 class="strength-title">Ships to Production</h3>
+        <p class="strength-desc">
+          4 projects currently live and used by real clients — not just demos. I build
+          things that actually run in the real world.
+        </p>
+      </div>
+      <div class="strength-card fade-in">
+        <span class="strength-icon">⚡</span>
+        <h3 class="strength-title">Full-Stack Versatility</h3>
+        <p class="strength-desc">
+          Comfortable in Python/Flask back-ends and JavaScript/React front-ends — I own
+          the whole stack from database schema to UI interaction.
+        </p>
+      </div>
+      <div class="strength-card fade-in">
+        <span class="strength-icon">🔧</span>
+        <h3 class="strength-title">Client-Focused Builder</h3>
+        <p class="strength-desc">
+          Every project started with a real business problem: a factory needing a POS,
+          a restaurant needing ordering, a dealership needing a website.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<!-- ════════════ CONTACT ════════════ -->
+<section id="contact" class="section">
+  <div class="container">
+
+    <div class="contact-card fade-in">
+      <h2 class="contact-title">Let's build something together</h2>
+      <p class="contact-sub">
+        I'm actively looking for full-stack developer roles and internships.
+        If you need someone who ships real products, I'd love to connect.
+      </p>
+      <div class="contact-links">
+        <a href="mailto:huzaifabin234@gmail.com" class="contact-link">
+          <span>✉</span>
+          <span>huzaifabin234@gmail.com</span>
+        </a>
+        <a href="tel:03081365550" class="contact-link">
+          <span>📞</span>
+          <span>0308 136 5550</span>
+        </a>
+        <span class="contact-link" style="cursor:default;">
+          <span>📍</span>
+          <span>Rahim Yar Khan, Pakistan</span>
+        </span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<footer>
+  <div class="container">
+    Huzaifa Bin Mudassar &nbsp;·&nbsp; Full-Stack Developer &nbsp;·&nbsp; © 2025
+  </div>
+</footer>
+
+<script>
+  /* ── Scroll progress bar ── */
+  window.addEventListener('scroll', () => {
+    const total = document.documentElement.scrollHeight - window.innerHeight;
+    if (total > 0) {
+      document.getElementById('progress-bar').style.width =
+        (window.scrollY / total * 100) + '%';
+    }
+  });
+
+  /* ── Fade-in on scroll ── */
+  const fadeObs = new IntersectionObserver(
+    entries => entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); }),
+    { threshold: 0.08 }
+  );
+  document.querySelectorAll('.fade-in').forEach(el => fadeObs.observe(el));
+
+  /* ── Active nav highlight ── */
+  const navLinks = document.querySelectorAll('.nav-links a');
+  const secObs = new IntersectionObserver(
+    entries => entries.forEach(e => {
+      if (e.isIntersecting) {
+        navLinks.forEach(a => a.classList.remove('active'));
+        const link = document.querySelector(`.nav-links a[href="#${e.target.id}"]`);
+        if (link) link.classList.add('active');
+      }
+    }),
+    { rootMargin: '-40% 0px -55% 0px' }
+  );
+  document.querySelectorAll('section[id]').forEach(s => secObs.observe(s));
+
+  /* ── Hero stat count-up (ease-out cubic, fires ~600ms after load) ── */
+  function countUp(el, target, duration) {
+    const start = Date.now();
+    (function tick() {
+      const p = Math.min((Date.now() - start) / duration, 1);
+      el.textContent = Math.floor((1 - Math.pow(1 - p, 3)) * target);
+      if (p < 1) requestAnimationFrame(tick);
+      else el.textContent = target;
+    })();
+  }
+  setTimeout(() => {
+    document.querySelectorAll('.hero-stat-num[data-target]').forEach(el => {
+      countUp(el, +el.dataset.target, 1400);
+    });
+  }, 600);
+
+  /* ── Hide scroll indicator once user scrolls ── */
+  window.addEventListener('scroll', () => {
+    const ind = document.querySelector('.scroll-indicator');
+    if (ind) ind.style.opacity = window.scrollY > 80 ? '0' : '';
+  }, { passive: true });
+</script>
+</body>
+</html>
