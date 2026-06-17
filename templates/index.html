@@ -19,13 +19,16 @@
 <nav>
   <div class="nav-inner">
     <a class="nav-logo" href="#hero">hbm<em>.</em>dev</a>
-    <ul class="nav-links">
+    <ul class="nav-links" id="navLinks">
       <li><a href="#about">About</a></li>
       <li><a href="#skills">Skills</a></li>
       <li><a href="#projects">Projects</a></li>
       <li><a href="#education">Education</a></li>
       <li><a href="#contact">Contact</a></li>
     </ul>
+    <button class="nav-hamburger" id="navToggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </nav>
 
@@ -642,6 +645,24 @@
     const ind = document.querySelector('.scroll-indicator');
     if (ind) ind.style.opacity = window.scrollY > 80 ? '0' : '';
   }, { passive: true });
+
+  /* ── Mobile nav hamburger toggle ── */
+  const navToggle = document.getElementById('navToggle');
+  const navMenu   = document.getElementById('navLinks');
+  if (navToggle && navMenu) {
+    navToggle.addEventListener('click', () => {
+      const open = navToggle.classList.toggle('open');
+      navMenu.classList.toggle('open', open);
+      navToggle.setAttribute('aria-expanded', open);
+    });
+    navMenu.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => {
+        navToggle.classList.remove('open');
+        navMenu.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      });
+    });
+  }
 </script>
 </body>
 </html>

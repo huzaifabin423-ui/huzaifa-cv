@@ -121,6 +121,30 @@ nav {
   background: rgba(255,255,255,0.06);
 }
 
+/* ── Mobile hamburger (hidden on desktop) ── */
+.nav-hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 6px 4px;
+  z-index: 101;
+}
+.nav-hamburger span {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform 0.25s, opacity 0.25s;
+}
+.nav-hamburger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.nav-hamburger.open span:nth-child(2) { opacity: 0; }
+.nav-hamburger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
 /* ════════════════════════════════════
    HERO
    ════════════════════════════════════ */
@@ -945,22 +969,66 @@ footer {
    RESPONSIVE
    ════════════════════════════════════ */
 @media (max-width: 900px) {
-  .hero-inner   { grid-template-columns: 1fr; }
-  .hero-visual  { display: none; }          /* hides avatar + badges on mobile */
+  .hero-inner {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  /* Show photo above text, centered and smaller */
+  .hero-visual {
+    width: 200px;
+    height: 200px;
+    order: -1;
+    margin: 0 auto;
+  }
+  .hero-avatar  { width: 160px; height: 160px; }
+  /* Floating badges overlap badly at this width — hide them */
+  .tech-float   { display: none; }
+  /* Re-center left-aligned hero content */
+  .hero-left    { display: flex; flex-direction: column; align-items: center; }
+  .hero-tagline { max-width: 100%; text-align: center; }
+  .hero-mini-stats { justify-content: center; }
+  .hero-cta     { justify-content: center; }
+  /* Rest of page */
   .about-grid   { grid-template-columns: 1fr; gap: 3rem; }
   .section      { padding: 4.5rem 0; }
   .scroll-indicator { display: none; }
 }
 
 @media (max-width: 640px) {
-  .container        { padding: 0 1.25rem; }
-  .nav-inner        { padding: 0 1.25rem; }
-  .nav-links a      { font-size: 0.8rem; padding: 0.32rem 0.5rem; }
-  .contact-card     { padding: 2.75rem 1.5rem; }
-  .edu-card         { flex-direction: column; gap: 1rem; align-items: flex-start; }
-  .edu-badge        { align-self: flex-start; }
-  .projects-grid    { grid-template-columns: 1fr; }
-  .project-footer   { flex-direction: column; align-items: flex-start; }
-  .project-link     { align-self: flex-start; }
-  .hero-mini-stats  { gap: 0.9rem; }
+  .container    { padding: 0 1.25rem; }
+  .nav-inner    { padding: 0 1.25rem; }
+  /* Hamburger replaces horizontal nav links */
+  .nav-hamburger { display: flex; }
+  .nav-links {
+    display: none;
+    position: fixed;
+    top: 58px; left: 0; right: 0;
+    background: rgba(12, 12, 20, 0.97);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+    border-bottom: 1px solid var(--border);
+    padding: 0.75rem 1.25rem 1.25rem;
+    flex-direction: column;
+    gap: 0.15rem;
+    z-index: 99;
+  }
+  .nav-links.open { display: flex; }
+  .nav-links a    { font-size: 0.95rem; padding: 0.6rem 0.75rem; }
+  /* Scale hero heading down for small screens */
+  h1              { font-size: clamp(2.2rem, 8vw, 3.5rem); }
+  .hero-container { padding-top: 6rem; padding-bottom: 3.5rem; }
+  /* Sections */
+  .contact-card   { padding: 2.75rem 1.5rem; }
+  .edu-card       { flex-direction: column; gap: 1rem; align-items: flex-start; }
+  .edu-badge      { align-self: flex-start; }
+  .projects-grid  { grid-template-columns: 1fr; }
+  .project-footer { flex-direction: column; align-items: flex-start; }
+  .project-link   { align-self: flex-start; }
+  .hero-mini-stats { gap: 0.9rem; }
+}
+
+@media (max-width: 480px) {
+  /* Even smaller circle on very small phones */
+  .hero-visual  { width: 150px; height: 150px; }
+  .hero-avatar  { width: 120px; height: 120px; }
 }
